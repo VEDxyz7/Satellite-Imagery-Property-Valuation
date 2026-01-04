@@ -27,35 +27,6 @@ The motivation is to enhance traditional real-estate valuation models by incorpo
 
 ---
 
-## 🗂️ Repository Structure
-
-PropertyValuation/
-│
-├── data/
-│ ├── raw/
-│ │ ├── train.csv
-│ │ └── test.csv
-│ └── images/ # Satellite images (not pushed to GitHub)
-│
-├── notebooks/
-│ ├── preprocessing.ipynb # EDA and preprocessing
-│ ├── model_training.ipynb # Model training, evaluation, inference
-│
-├── src/
-│ ├── data_fetcher.py # Satellite image downloader (Mapbox API)
-│ ├── dataset.py # Custom PyTorch Dataset
-│ └── model.py # Multimodal model architecture
-│
-├── outputs/
-│ └── 24112080_final.csv # Final test predictions (submission file)
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-
-
----
-
 ## 📊 Dataset Description
 
 ### Tabular Data

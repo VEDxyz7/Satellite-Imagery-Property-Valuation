@@ -1,6 +1,4 @@
 # 📡 Satellite Imagery–Based Property Valuation  
-**CDC × Yhills Open Projects (2025–2026)**  
-**Enrollment Number:** 24112080  
 
 ---
 
@@ -85,17 +83,6 @@ These visualizations help interpret how environmental context contributes to pro
 
 ---
 
-## 📈 Evaluation Strategy
-
-- Model performance evaluated using a **train–validation split** on `train.csv`
-- Metrics reported:
-  - RMSE
-  - R²
-  - Log-RMSE (for multimodal model)
-- Final predictions on `test.csv` were generated **without access to ground-truth labels**, consistent with standard supervised learning practice
-
----
-
 ## 🧪 Inference Strategy (Hybrid)
 
 To ensure predictions for all test samples:
@@ -115,14 +102,6 @@ This hybrid approach ensures robustness and reflects real-world deployment scena
 - **Prediction File:** `24112080_final.csv`  
   - Format: `id, predicted_price`  
 - **Final Report:** `24112080_report.pdf` (PDF only)  
-
----
-
-## ⚠️ Limitations
-
-- Satellite imagery was fetched for a limited subset of properties due to API constraints  
-- Multimodal model performance is limited by the number of available images  
-- The primary focus of this project is pipeline design, explainability, and engineering quality rather than absolute price calibration  
 
 ---
 

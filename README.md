@@ -1,5 +1,10 @@
 # Satellite Imagery–Based Property Valuation
 
+- Name : Ved Parikh
+- Enrollment No : 24112080
+- Project Report : [Satellite Imagery Based Property Valuation Report.pdf](https://github.com/user-attachments/files/24468300/Satellite.Imagery.Based.Property.Valuation.Report.pdf)
+
+
 ## Project Overview
 
 This project implements a multimodal regression pipeline to predict residential property prices by combining:

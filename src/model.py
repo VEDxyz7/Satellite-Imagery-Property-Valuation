@@ -22,10 +22,13 @@ class ImageEncoder(nn.Module):
 
         self.feature_maps = None
 
-    def forward(self, x):
+    def forward(self, x, enable_gradcam=False):
         x = self.features(x)
 
-        self.feature_maps = x
+        if enable_gradcam:
+            x.requires_grad_(True)
+            x.retain_grad()
+            self.feature_maps = x
 
         x = self.pool(x)
         x = x.view(x.size(0), -1)
@@ -59,8 +62,8 @@ class MultimodalRegressor(nn.Module):
             nn.Linear(128, 1)
         )
 
-    def forward(self, image, tabular):
-        img_feat = self.image_encoder(image)
+    def forward(self, image, tabular, enable_gradcam=False):
+        img_feat = self.image_encoder(image, enable_gradcam=enable_gradcam)
         tab_feat = self.tabular_encoder(tabular)
 
         fused = torch.cat([img_feat, tab_feat], dim=1)
